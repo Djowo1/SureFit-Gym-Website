@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Landing Page</title>
+    <link rel="stylesheet" href="Fitnesspage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Pacifico&family=Rochester&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="fitness images/Preview.png">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="fitness images/Preview.png" alt="Logo" class="logo-img">
+                <h1>SureFit</h1>    
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>       
+        <div class="slideshow-container">
+        
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('fitness images/sule-makaroglu-YFmvjO3TP_s-unsplash.jpg');">
+                <div class="header-content" id="headcontent1">
+                    <h1>Transform Your Body & Mind</h1>
+                    <p>Join our fitness programs and unleash your potential!</p>
+                    <a href="#programs" class="btn">Explore Programs</a>
+                </div>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('fitness images/danielle-cerullo-Oo-rHghLNhA-unsplash.jpg');">
+                <div class="header-content" id="headcontent2">
+                    <h1>Achieve Your Fitness Goals</h1>
+                    <p>Personalized training sessions with expert guidance.</p>
+                    <a href="#trainers" class="btn">Meet Our Trainers</a>
+                </div>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('fitness images/sam-moghadam-0sa8D74iodI-unsplash.jpg');">
+                <div class="header-content">
+                    <h1>Strength & Conditioning</h1>
+                    <p>Build muscle and endurance with our tailored plans.</p>
+                    <a href="#strength" class="btn">Learn More</a>
+                </div>
+            </div>
+    
+            <!-- Slide 4 -->
+             
+            <div class="slide" style="background-image: url('fitness images/bruce-mars-ZXq7xoo98b0-unsplash.jpg');">
+                <div class="header-content">
+                    <h1>Mindful Yoga & Wellness</h1>
+                    <p>Experience tranquility and improve your flexibility.</p>
+                    <a href="#yoga" class="btn">Join Now</a>
+                </div>
+            </div>
+    
+            <!-- Navigation Buttons -->           
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>    
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to SureFit, where fitness meets inspiration, and goals turn into achievements!
+
+            At SureFit, we believe that fitness is more than just a routine—it’s a lifestyle, a journey, and a powerful path to becoming the best version of yourself. Our mission is to empower individuals of all fitness levels to push their limits, break barriers, and thrive in a supportive and dynamic environment.</p>
+    </section>
+
+    <!-- Our Services Section -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <p>Explore our wide range of fitness programs designed to meet your goals.</p>
+    <div class="service-cards">
+        <div class="service-card1">
+            <h3>Personal Training</h3>
+            <p>Get one-on-one training sessions with our expert trainers.</p>
+            <a href="#personal-training" class="btn">Learn More</a>
+        </div>
+        <div class="service-card2">
+            <h3>Group Classes</h3>
+            <p>Stay motivated and have fun with our dynamic group classes.</p>
+            <a href="#group-classes" class="btn">Join Now</a>
+        </div>
+        <div class="service-card3">
+            <h3>Nutrition Plans</h3>
+            <p>Receive tailored meal plans to complement your fitness routine.</p>
+            <a href="#nutrition-plans" class="btn">Get Started</a>
+        </div>
+        <div class="service-card4">
+            <h3>Yoga & Pilates</h3>
+            <p>Find balance and flexibility through our relaxing sessions.</p>
+            <a href="#yoga-pilates" class="btn">Explore More</a>
+        </div>
+    </div>
+</section>
+
+   <!-- Programs Section -->
+<section class="programs-section" id="programs">
+    <h2>Our Fitness Programs</h2>
+    <p>Discover a variety of fitness programs designed for all fitness levels.</p>
+    
+    <div class="programs-container">
+        <!-- Program Card 1 -->
+        <div class="program-card">
+            <img src="fitness images/alora-griffiths-WiKEnlt6Z3U-unsplash.jpg" alt="Strength Training">
+            <div class="program-content">
+                <h3>Strength Training</h3>
+                <p>Build muscle and increase strength with our expert-led programs.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Program Card 2 -->
+        <div class="program-card">
+            <img src="fitness images/alexander-red-d3bYmnZ0ank-unsplash.jpg" alt="Cardio Fitness">
+            <div class="program-content">
+                <h3>Cardio Fitness</h3>
+                <p>Improve endurance and heart health with high-energy cardio sessions.</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+        
+        <!-- Program Card 3 -->
+        <div class="program-card">
+            <img src="fitness images/carl-barcelo-nqUHQkuVj3c-unsplash.jpg" alt="Yoga & Wellness">
+            <div class="program-content">
+                <h3>Yoga & Wellness</h3>
+                <p>Find balance and flexibility through mindful yoga practices.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+        </div>
+        
+        <!-- Program Card 4 -->
+        <div class="program-card">
+            <img src="fitness images/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg" alt="High-Intensity Training">
+            <div class="program-content">
+                <h3>HIIT</h3>
+                <p>Maximize your workout in minimal time with high-intensity intervals.</p>
+                <a href="#" class="btn">Start Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Meet Our Trainers Section -->
+<section class="trainers-section" id="trainers">
+    <h2>Meet Our Trainers</h2>
+    <p>Our certified trainers are here to help you achieve your fitness goals.</p>
+    
+    <div class="trainers-container">
+        <!-- Trainer Card 1 -->
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="fitness images/john-fornander-TAZoUmDqzXk-unsplash.jpg" alt="John Doe">
+            </div>
+            <h3>John Doe</h3>
+            <p>Strength & Conditioning Specialist</p>
+            <a href="tel:+234 8135566001" class="contact-info">📞 +234 8135566001</a>
+        </div>
+        
+        <!-- Trainer Card 2 -->
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="fitness images/IMG-20250209-WA0002.jpg" alt="Jane Smith">
+            </div>
+            <h3>Olowogoke Ayodeji</h3>
+            <p>Yoga & Wellness Coach</p>
+            <a href="tel:+234 7022388021" class="contact-info">📞 +234 7022388021</a>
+        </div>
+        
+        <!-- Trainer Card 3 -->
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="fitness images/osarodion-amenze-lyKYUOdvsEs-unsplash.jpg" alt="Mike Johnson">
+            </div>
+            <h3>Jane Smith</h3>
+            <p>Cardio & HIIT Trainer</p>
+            <a href="tel:+234 8023488654" class="contact-info">📞 +234 8023488654</a>
+        </div>
+        
+        <!-- Trainer Card 4 -->
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="fitness images/valery-sysoev-LDAirERNzew-unsplash.jpg" alt="Emily Davis">
+            </div>
+            <h3>Mike Johnson</h3>
+            <p>Nutrition & Fitness Coach</p>
+            <a href="tel:+234 8138422068" class="contact-info">📞 +234 8138422068</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Latest From Our Blog Section -->
+<section class="blog-section" id="blog">
+    <h2>Latest From Our Blog</h2>
+    <p>Stay updated with the latest trends and tips in fitness and health.</p>
+    
+    <div class="blog-container">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="fitness images/wikisleep-app-qvIrI4ueqzY-unsplash.jpg" alt="5 Tips for a Healthier Lifestyle">
+            </div>
+            <div class="blog-content">
+                <h3>5 Tips for a Healthier Lifestyle</h3>
+                <p>Discover simple yet effective ways to boost your overall well-being and maintain a healthy lifestyle.</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="fitness images/scott-webb-Vn39uEkX00s-unsplash.jpg" alt="The Benefits of Strength Training">
+            </div>
+            <div class="blog-content">
+                <h3>The Benefits of Strength Training</h3>
+                <p>Learn how strength training can improve your physical health and contribute to long-term fitness.</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="fitness images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg" alt="Cardio vs. Weight Training: Which is Better?">
+            </div>
+            <div class="blog-content">
+                <h3>Cardio vs. Weight Training: Which is Better?</h3>
+                <p>Find out which type of exercise is more beneficial for your fitness goals and how to balance both.</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us Section -->
+<section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Get in touch with us!</p>
+    
+    <div class="contact-container">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Your ultimate fitness partner, guiding you to a healthier lifestyle with top-notch training and resources.</p>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>        
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="fitness images/alexander-shatov-_qsuER9xYOY-unsplash.jpg" alt="Facebook"></a>
+                <a href="#"><img src="fitness images/alexander-shatov-k1xf2D7jWUs-unsplash.jpg" alt="Twitter"></a>
+                <a href="#"><img src="fitness images/alexander-shatov-71Qk8ODIBko-unsplash.jpg" alt="Instagram"></a>
+                <a href="#"><img src="fitness images/alexander-shatov-9Zjd7PE_FRM-unsplash.jpg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>    
+    <div class="footer-bottom">
+        <p>&copy; 2025 SureFit. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="fitnesspage.js"></script>
+</body>
+</html>

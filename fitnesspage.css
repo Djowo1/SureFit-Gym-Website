@@ -1,0 +1,1162 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+header{
+    display : flex;
+    flex-direction: coloumn ;
+}
+
+.searchbar input {
+    width: 350px;
+    border-radius: 20px;
+    height: 36px;
+}
+
+.searchbar button {
+    border-radius: 15px;
+    height: 35px;
+    width: 80px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.searchbar button:hover{
+    background-color: #009688 ;
+}
+
+/* Header Slideshow Section */
+.header-section {
+
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;   
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 250px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: perspective(1000px) rotateY(20deg) translateZ(-200px);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0) translateZ(0);
+    z-index: 1;
+}
+
+.header-content {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: float 3s infinite ease-in-out;
+    max-height: 800px;  
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+#headcontent1 {  
+   background-size: 50%;    
+}
+
+.btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    animation: bounceIn 2.5s ease-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 2rem;
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #009688;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Dropdown Menu */
+@media screen and (max-width: 800px) {
+
+    .searchbar input {
+        width: 170px;
+        height: 30px;
+        border-radius: 20px;
+        height: 36px;
+        margin-left: 15px;
+    }
+    
+    .searchbar button {
+        border-radius: 15px;
+        height: 30px;
+        width: 70px;
+        margin-left: 50px;
+        cursor: pointer;    
+    }
+    
+    .searchbar button:hover{
+        background-color: #009688 ;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        
+        margin-left: 30px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .navbar {
+        position: fixed;
+    }
+}
+
+#home {
+    margin-top: 50px;
+}
+
+
+/* About Section */
+.about {
+    padding: 50px;
+    background: rgb(233, 228, 228);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    margin-top: 130px;
+    
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 400px ;
+    font-family: pacifico;
+    color: rgb(7, 84, 107);
+}
+
+.about p {
+    font-size: 1.1rem;    
+}
+/* Our Services Section */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f3f4f6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.services h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    animation: slideIn 1.5s ease-out;
+    font-family: pacifico;
+    color: rgb(7, 84, 107);
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+    animation: fadeIn 2s ease-out;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card1 {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    transform: perspective(1000px) translateZ(0);
+    background-image: url("fitness images/craig-lovelidge-yDGsn39fbD4-unsplash.jpg");
+    background-size: cover;
+}
+
+.service-card1 h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f8f8f8;
+    animation: float 3s infinite ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(39, 38, 38, 0.1);
+}
+
+.service-card1 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e7dede;
+    background-color: rgba(3, 3, 3, 0.4);
+}
+
+.service-card1 .btn {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.service-card1 .btn:hover {
+    background-color: #00796b;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card1:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card1::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+    background-size: 50px 50px;
+    animation: rotateBg 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-card1 * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card2 {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    background-image: url("fitness images/bruce-mars-ZXq7xoo98b0-unsplash.jpg");
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    transform: perspective(1000px) translateZ(0);
+}
+
+.service-card2 h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #e1eaeb;
+    animation: float 3s infinite ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(39, 38, 38, 0.1);
+}
+
+.service-card2 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e7dede;
+    background-color: rgba(3, 3, 3, 0.4);
+}
+
+.service-card2 .btn {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.service-card2 .btn:hover {
+    background-color: #00796b;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card2:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card2::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+    background-size: 50px 50px;
+    animation: rotateBg 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-card2 * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card3 {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    transform: perspective(1000px) translateZ(0);
+    background-image: url("fitness images/gina-lin-m27OTMegUyA-unsplash.jpg");
+    background-size: cover;
+}
+
+.service-card3 h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #eef0f0;
+    animation: float 3s infinite ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(39, 38, 38, 0.1);
+}
+
+.service-card3 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e7dede;
+    background-color: rgba(3, 3, 3, 0.4);
+}
+
+.service-card3 .btn {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.service-card3 .btn:hover {
+    background-color: #00796b;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card3:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card3::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+    background-size: 50px 50px;
+    animation: rotateBg 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-card3 * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card4 {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    transform: perspective(1000px) translateZ(0);
+    background-image: url("fitness images/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg");
+    background-size: cover;
+}
+
+.service-card4 h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #0f0f0f;
+    animation: float 3s infinite ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(243, 237, 237, 0.1);
+}
+
+.service-card4 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #141212;
+    background-color: rgba(243, 226, 226, 0.4);
+}
+
+.service-card4 .btn {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.service-card4 .btn:hover {
+    background-color: #00796b;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card4:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card4::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+    background-size: 50px 50px;
+    animation: rotateBg 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-card4 * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Programs Section */
+.programs-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #333;
+}
+
+.programs-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.programs-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Programs Container */
+.programs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Program Card */
+.program-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+}
+
+.program-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-bottom: 2px solid #4caf50;
+}
+
+.programs-section h2 {
+    font-family: pacifico;
+    color: rgb(7, 84, 107);
+}
+
+.program-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.program-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color:  rgb(7, 84, 107);
+    animation: slideIn 1.5s ease-out;
+}
+
+.program-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn {
+    background-color:  rgb(7, 84, 107);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 2.5s ease-out;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Hover Effects */
+.program-card:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.program-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+/* Meet Our Trainers Section */
+.trainers-section {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #333;
+}
+
+.trainers-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out;
+     font-family: pacifico;
+    color: rgb(7, 84, 107);
+}
+
+.trainers-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Trainers Container */
+.trainers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Trainer Card */
+.trainer-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa;
+}
+
+/* Trainer Image */
+.trainer-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid rgb(7, 84, 107);
+    transition: transform 0.5s, border-color 0.3s;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.trainer-card:hover .trainer-image {
+    transform: scale(1.1);
+    border-color:rgb(70, 136, 156);
+}
+
+/* Trainer Details */
+.trainer-card h3 {
+    font-size: 1.8rem;
+    color: rgb(7, 84, 107);
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.trainer-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info {
+    color: rgb(7, 84, 107);
+    font-weight: bold;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.contact-info:hover {
+    color: #81c784;
+    transform: scale(1.1);
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.blog-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out;
+    font-family: pacifico;
+    color: rgb(7, 84, 107);
+
+}
+
+.blog-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Blog Container */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Blog Card */
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa;
+}
+
+/* Blog Image */
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    transition: all 0.4s ease;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-size: 1.8rem;
+    color: rgb(7, 84, 107);
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Read More Button */
+.btn-read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgb(7, 84, 107);
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-read-more:hover {
+    background-color: rgb(7, 84, 107);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out;
+    font-family: pacifico;
+    color: rgb(7, 84, 107);
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: slideIn 1.5s ease-out;
+}
+
+input, textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.btn-submit {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(7, 84, 107);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: rgb(7, 84, 107);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #9a99cc;
+    color: white;
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color:rgb(7, 84, 107);
+}
+
+.footer p, .footer a {
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffeb3b;
+    transform: translateX(5px);
+}
+
+/* Footer Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(1) invert(0);
+    transition: transform 0.4s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2) rotate(360deg);
+    filter: brightness(1) invert(0);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    color: #ccc;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+@keyframes bgZoom {
+    0% { background-size: 100%; }
+    100% { background-size: 110%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+}
+
+    @media(max-width:300px){
+
+        .logo{
+            margin-left: -40px;
+        }
+        .logo h1{
+            font-size: 15px;
+        }
+
+        .logo img{
+            font-size: 10px;
+    }
+
+    .service-card1{
+        width: 200px;
+    }
+
+    .service-card2{
+        width: 200px;
+    }
+
+    .service-card3{
+        width: 200px;
+    }
+
+    .service-card4{
+        width: 200px;
+    }
+
+    .program-card{
+        width: 200px;
+    }
+
+    .trainer-card{
+        width: 200px;
+    }
+
+    .blog-card{
+        width: 200px;
+    }
+}
